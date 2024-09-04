@@ -1,30 +1,38 @@
-/* Reset some default styles */
-body, h1, h2, p, ul {
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif; /* Apply the Google Font */
+    background: #e8e8e8; /* Lighter background for a subtle look */
+    color: #444; /* Slightly darker text for better readability */
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-}
-
-/* Basic styling */
-body {
-    font-family: 'Arial', sans-serif;
-    line-height: 1.6;
-    background: #f9f9f9;
-    color: #333;
 }
 
 header {
-    background: #333;
-    color: #fff;
-    padding: 1.5rem;
-    text-align: center;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    background: linear-gradient(90deg, #f06c64, #d36f79); /* More subtle gradient */
+    color: white;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 50px; /* Adjust size as needed */
+    height: auto;
+    margin-right: 20px;
 }
 
 header h1 {
     margin: 0;
-    font-size: 2.5rem;
-    color: #ff6f61; /* Coral color */
+    font-size: 2.2em; /* Slightly smaller font size for a subtler look */
 }
 
 nav ul {
@@ -34,66 +42,106 @@ nav ul {
 
 nav ul li {
     display: inline;
-    margin: 0 1rem;
+    margin: 0 15px;
 }
 
 nav ul li a {
-    color: #fff;
+    color: white;
     text-decoration: none;
     font-weight: bold;
-    font-size: 1.2rem;
+    transition: color 0.3s;
 }
 
 nav ul li a:hover {
-    color: #ff6f61;
-    border-bottom: 2px solid #ff6f61;
+    color: #ffd700; /* Gold color on hover */
 }
 
 main {
-    padding: 2rem;
+    padding: 20px;
 }
 
-section {
-    margin-bottom: 2rem;
-    padding: 1.5rem;
-    border-radius: 8px;
-    background: #fff;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+.tabcontent {
+    display: none;
 }
 
-h2 {
-    border-bottom: 3px solid #ff6f61;
-    padding-bottom: 0.5rem;
-    margin-bottom: 1rem;
-    color: #333;
-    font-size: 2rem;
+.tabcontent img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px; /* Slightly less rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15); /* Subtle shadow */
+}
+
+.tablink.active {
+    color: #f06c64; /* Highlight color for active tab */
+    border-bottom: 2px solid #f06c64;
+    font-weight: bold;
+}
+
+.gallery-container {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 8px; /* Slightly less rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15); /* Subtle shadow */
+    background: white;
 }
 
 .gallery {
     display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    justify-content: center;
+    transition: transform 0.5s ease;
 }
 
 .gallery img {
-    max-width: 100%;
-    height: auto;
-    border: 5px solid #ff6f61; /* Coral border */
-    border-radius: 10px;
-    transition: transform 0.3s ease;
+    width: 100%;
+    flex: 0 0 auto;
 }
 
-.gallery img:hover {
-    transform: scale(1.05);
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 12px;
+    margin-top: -22px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.6); /* More subtle background color */
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    transition: background-color 0.3s, transform 0.3s;
+    border-radius: 50%;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8); /* More subtle hover effect */
+    transform: scale(1.1);
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
 }
 
 footer {
-    background: #333;
-    color: #fff;
+    background: linear-gradient(90deg, #d36f79, #f06c64); /* More subtle gradient */
+    color: white;
     text-align: center;
-    padding: 1rem;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
+    padding: 20px;
+}
+
+footer p {
+    margin: 10px 0;
+}
+
+footer a {
+    color: #ffd700;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: white;
 }
