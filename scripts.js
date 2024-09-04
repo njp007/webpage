@@ -21,19 +21,16 @@ function openTab(evt, tabId) {
     evt.currentTarget.classList.add('active');
 }
 
+let currentIndex = { '2d': 0, '3d': 0 }; // Track indices separately for 2D and 3D
+
 function moveSlide(step, type) {
     const gallery = document.querySelector(`#${type}-designs .gallery`);
     const slides = gallery.children;
     const totalSlides = slides.length;
 
-    // Ensure currentIndex is reset for each gallery type
-    if (type === '2d') {
-        currentIndex = (currentIndex + step + totalSlides) % totalSlides;
-    } else {
-        currentIndex = (currentIndex + step + totalSlides) % totalSlides;
-    }
-    
-    const offset = -currentIndex * 100; // Change to 100% to show one image at a time
+    // Update the index for the specific type
+    currentIndex[type] = (currentIndex[type] + step + totalSlides) % totalSlides;
+    const offset = -currentIndex[type] * 100; // Change to 100% to show one image at a time
 
     gallery.style.transform = `translateX(${offset}%)`;
 }

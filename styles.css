@@ -17,11 +17,13 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap; /* Ensure flexibility on smaller screens */
 }
 
 .header-content {
     display: flex;
     align-items: center;
+    flex: 1 1 100%; /* Full width on smaller screens */
 }
 
 .logo {
@@ -33,16 +35,21 @@ header {
 header h1 {
     margin: 0;
     font-size: 2.2em; /* Slightly smaller font size for a subtler look */
+    flex: 1 1 auto; /* Adjust font size and spacing */
 }
 
 nav ul {
     list-style: none;
     padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap; /* Wrap links on smaller screens */
+    justify-content: center; /* Center links on smaller screens */
 }
 
 nav ul li {
     display: inline;
-    margin: 0 15px;
+    margin: 0 10px; /* Adjust spacing for smaller screens */
 }
 
 nav ul li a {
@@ -144,4 +151,35 @@ footer a {
 
 footer a:hover {
     color: white;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.8em; /* Smaller font size on smaller screens */
+    }
+
+    nav ul {
+        flex-direction: column; /* Stack navigation links vertically */
+        align-items: center; /* Center align links */
+    }
+
+    nav ul li {
+        margin: 5px 0; /* Adjust spacing for stacked links */
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.5em; /* Even smaller font size on very small screens */
+    }
+
+    .logo {
+        width: 40px; /* Smaller logo on smaller screens */
+    }
+
+    .prev, .next {
+        padding: 8px; /* Smaller navigation buttons */
+        font-size: 18px; /* Smaller font size for navigation buttons */
+    }
 }
