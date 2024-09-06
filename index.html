@@ -3,54 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rachana Graphics</title>
+    <title>Rachana Graphics - Interior Design</title>
     <link rel="icon" href="Images/logo/rg.jpg" type="image/x-icon"/>
     <link rel="stylesheet" href="styles.css">
     <script src="scripts.js" defer></script>
 </head>
 <body>
     <header>
-        <div class="header-left">
-            <img src="Images/logo/rg.jpg" alt="Rachana Graphics Logo" class="logo-title">
-            <h1>Rachana Graphics</h1>
+        <div class="header-content">
+            <img src="Images/logo/rg.jpg" alt="Rachana Graphics Logo" class="logo">
+            <nav class="nav">
+                <ul>
+                    <li><a href="#" class="nav-link tablink" onclick="openTab(event, 'home')">Home</a></li>
+                    <li><a href="#" class="nav-link tablink" onclick="openTab(event, 'about-us')">About Us</a></li>
+                    <li><a href="#" class="nav-link tablink" onclick="openTab(event, 'residential-designs')">Residential</a></li>
+                    <li><a href="#" class="nav-link tablink" onclick="openTab(event, 'commercial-designs')">Commercial</a></li>
+                    <li><a href="mailto:rachanagraphics14@gmail.com" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
         </div>
-        <nav class="header-right">
-            <ul>
-                <li><a href="#" class="tablink" onclick="openTab(event, '2d-designs')">2D Designs</a></li>
-                <li><a href="#" class="tablink" onclick="openTab(event, '3d-designs')">3D Designs</a></li>
-                <li><a href="mailto:rachanagraphics14@gmail.com">Contact</a></li>
-            </ul>
-        </nav>
     </header>
-    
+
     <main>
-        <section id="2d-designs" class="tabcontent">
-            <h2>2D Designs</h2>
-            <div class="gallery">
-                <img src="Images/2D/img24.jpg" alt="2D Design 1">
-                <img src="Images/2D/img25.jpg" alt="2D Design 2">
-                <img src="Images/2D/img26.jpg" alt="2D Design 3">
-                <img src="Images/2D/img27.jpg" alt="2D Design 4">
-                <img src="Images/2D/img28.jpg" alt="2D Design 5">
-                <img src="Images/2D/img29.jpg" alt="2D Design 6">
-                <img src="Images/2D/img30.jpg" alt="2D Design 7">
+        <section id="home" class="tabcontent home">
+            <div class="hero">
+                <h1>Transform Your Space with Rachana Graphics</h1>
+                <p>Leading experts in residential and commercial interior design.</p>
+                <a href="#" class="cta-button" onclick="openTab(event, 'residential-designs')">See Our Work</a>
             </div>
         </section>
 
-        <section id="3d-designs" class="tabcontent">
-            <h2>3D Designs</h2>
+        <section id="about-us" class="tabcontent">
+            <h2>About Us</h2>
+            <p>At Rachana Graphics, we specialize in creating stunning interior spaces that reflect your unique style and needs. With years of experience in both residential and commercial design, our team is dedicated to bringing your vision to life with precision and creativity. Our passion is transforming spaces into beautiful, functional environments that inspire and delight.</p>
+            
+            <div class="owner-section">
+                <h3>Meet the Owner</h3>
+                <div class="owner-info">
+                    <img src="Images/owner/IMG_20240613_162709.jpg" alt="Owner Photo" class="owner-photo">
+                    <div class="owner-bio">
+                        <p>Hello! I'm Dipika, the founder of Rachana Graphics. With a passion for design and a keen eye for detail, I lead a talented team dedicated to creating exceptional interior spaces. My goal is to turn your dreams into reality, making sure every project is uniquely yours. I look forward to working with you!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="residential-designs" class="tabcontent">
+            <h2>Residential Designs</h2>
             <div class="gallery">
-                <img src="Images/3D/img36.jpg" alt="3D Design 1">
-                <img src="Images/3D/img37.jpg" alt="3D Design 2">
-                <img src="Images/3D/img38.jpg" alt="3D Design 3">
-                <img src="Images/3D/img39.jpg" alt="3D Design 4">
-                <img src="Images/3D/img40.jpg" alt="3D Design 5">
-                <img src="Images/3D/img41.jpg" alt="3D Design 6">
-                <img src="Images/3D/img42.jpg" alt="3D Design 7">
-                <img src="Images/3D/img43.jpg" alt="3D Design 8">
-                <img src="Images/3D/img44.jpg" alt="3D Design 9">
-                <img src="Images/3D/img45.jpg" alt="3D Design 10">
-                <img src="Images/3D/img46.jpg" alt="3D Design 11">
+                <img src="Images/3D/img36.jpg" alt="Residential Design 1">
+                <img src="Images/3D/img37.jpg" alt="Residential Design 2">
+                <img src="Images/3D/img38.jpg" alt="Residential Design 3">
+                <!-- Add more images as needed -->
+            </div>
+        </section>
+
+        <section id="commercial-designs" class="tabcontent">
+            <h2>Commercial Designs</h2>
+            <div class="gallery">
+                <!-- <img src="Images/Commercial/img1.jpg" alt="Commercial Design 1">
+                <img src="Images/Commercial/img2.jpg" alt="Commercial Design 2">
+                <img src="Images/Commercial/img3.jpg" alt="Commercial Design 3"> -->
+                <!-- Add more images as needed -->
             </div>
         </section>
     </main>
