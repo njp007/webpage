@@ -13,7 +13,7 @@ body {
 header {
     background: #ffffff; /* White background for header */
     color: #000; /* Black text color in header */
-    padding: 20px 0;
+    padding: 15px 0;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -23,11 +23,11 @@ header {
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 15px;
 }
 
 .logo {
-    width: 50px;
+    width: 40px;
     height: auto;
 }
 
@@ -39,15 +39,16 @@ header {
 }
 
 .nav ul li {
-    margin-left: 20px;
+    margin-left: 15px;
 }
 
 .nav ul li a {
     color: #000;
     text-decoration: none;
-    font-weight: 500;
+    font-weight: 400;
     padding: 5px 10px;
     transition: color 0.3s, background-color 0.3s;
+    font-size: 0.9em; /* Reduced font size */
 }
 
 .nav ul li a:hover {
@@ -57,43 +58,60 @@ header {
 }
 
 main {
-    padding: 20px;
+    padding: 15px;
 }
 
+/* Home Section Styles */
 .home {
+    position: relative;
     background: url('Images/hero-bg.jpg') no-repeat center center/cover;
-    color: #0b0000; /* black text color */
+    color: #ffffff; /* White text color for contrast */
+    padding: 80px 15px; /* Reduced padding for hero section */
     text-align: center;
-    padding: 100px 20px;
 }
 
-.home h1 {
-    font-size: 2.5em;
+.hero-content {
+    max-width: 700px; /* Center content */
+    margin: 0 auto;
+    padding: 15px;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background for readability */
+    border-radius: 8px; /* Slightly reduced border-radius */
+}
+
+.hero-content h1 {
+    font-size: 2em; /* Reduced font size */
     margin: 0;
+    font-weight: 700;
+    line-height: 1.2;
 }
 
-.home p {
-    font-size: 1.2em;
-    margin: 20px 0;
+.hero-content p {
+    font-size: 1em; /* Reduced font size */
+    margin: 15px 0;
+    line-height: 1.4;
 }
 
 .cta-button {
+    display: inline-block;
     background-color: #000000; /* Black button background */
-    color: #ffffff; /* White text color for button */
-    padding: 15px 30px;
+    color: #ffffff; /* White text color */
+    padding: 12px 25px;
     text-decoration: none;
     border-radius: 5px;
+    font-size: 1em; /* Reduced font size */
     font-weight: 500;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, transform 0.3s;
 }
 
 .cta-button:hover {
-    background-color: #333333; /* Darker black button background on hover */
+    background-color: #333333; /* Darker button background on hover */
+    transform: scale(1.05); /* Slight zoom effect */
 }
 
+/* Tab Content Styles */
 .tabcontent {
     display: none;
-    padding: 20px;
+    padding: 15px;
     background: #ffffff; /* White background for tab content */
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -119,11 +137,42 @@ main {
     justify-content: center;
 }
 
+/* About Us Section Styles */
+.about-us {
+    padding: 15px;
+}
+
+.owner-section {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.owner-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.owner-photo {
+    width: 120px; /* Reduced width */
+    height: auto;
+    border-radius: 50%;
+    border: 4px solid #000;
+}
+
+.owner-bio {
+    max-width: 500px; /* Reduced width */
+    margin: 0 auto;
+    font-size: 0.9em; /* Reduced font size */
+}
+
+/* Footer Styles */
 footer {
     background: #ffffff; /* White background for footer */
     color: #000; /* Black text color */
     text-align: center;
-    padding: 20px;
+    padding: 15px;
     box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -135,79 +184,66 @@ footer a {
     color: #000;
     text-decoration: none;
     font-weight: 500;
+    font-size: 0.9em; /* Reduced font size */
 }
 
 footer a:hover {
     text-decoration: underline;
 }
 
-/* About Us Section */
-.about-us {
-    padding: 20px;
-}
-
-.owner-section {
-    margin-top: 20px;
-    text-align: center;
-}
-
-.owner-info {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-}
-
-.owner-photo {
-    width: 150px;
-    height: auto;
-    border-radius: 50%;
-    border: 4px solid #000;
-}
-
-.owner-bio {
-    max-width: 600px;
-    margin: 0 auto;
-}
-
 /* Responsive Styles */
 @media (max-width: 768px) {
-    .logo {
-        width: 40px;
-    }
-
-    header {
-        padding: 15px 0;
+    .header-content {
+        flex-direction: column;
+        align-items: flex-start;
     }
 
     .nav ul {
         flex-direction: column;
-        align-items: center;
+        align-items: flex-start;
     }
 
     .nav ul li {
         margin: 10px 0;
     }
 
-    .owner-info {
-        flex-direction: column;
+    .home {
+        padding: 60px 15px;
     }
 
-    .owner-photo {
-        width: 120px;
+    .hero-content h1 {
+        font-size: 1.8em; /* Reduced font size */
+    }
+
+    .hero-content p {
+        font-size: 0.9em; /* Reduced font size */
+    }
+
+    .cta-button {
+        padding: 10px 20px;
+        font-size: 0.9em; /* Reduced font size */
     }
 }
 
 @media (max-width: 480px) {
     .logo {
-        width: 30px;
+        width: 35px; /* Reduced logo width */
     }
 
     .home h1 {
-        font-size: 1.8em;
+        font-size: 1.4em; /* Reduced font size */
     }
 
     .home p {
-        font-size: 1em;
+        font-size: 0.8em; /* Reduced font size */
+    }
+
+    .cta-button {
+        padding: 8px 15px;
+        font-size: 0.8em; /* Reduced font size */
+    }
+
+    .owner-photo {
+        width: 90px; /* Reduced photo width */
     }
 }
